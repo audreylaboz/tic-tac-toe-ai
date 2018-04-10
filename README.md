@@ -12,24 +12,6 @@ The goal of this project is to build a version of Tic-tac-toe with 0-, 1-, and 2
 
 You'll be implementing Tic-tac-toe using multiple objects that relate and collaborate, including separate classes for human players and computer players. The computer player class will have some sort of artificial intelligence or logic to make move decisions. Finally, you'll wrap all of this up in a CLI.
 
-## Working together
-Working on a software project with another person is not something to be taken lightly. While you are a fantastic solo coder, software development is often a collaborative activity. Just like anything else, there is skill in collaborating on code. In the end, collaborating with another person boils down to three different styles:
-
-  - Pair - Pair the entire time working linearly together
-  - Pass - Each person completes 1 requirement and then passes the project to the other person
-  - Parallel - work on different parts at the same time by agreeing on interfaces and stubs and meeting in the middle
-    - Person A codes the board and the human player class
-    - Person B creates the game engine, expecting a working board and player with stubs
-    - Person A creates the computer player
-    - Work together on the AI (It's hard)
-
-Remember! The goal at The Flatiron School is not to do, it is to *learn*. Make sure you have worked in all three styles of collaboration. We want you to learn how the different styles work. The most important part is that together you and your partner understand every piece of the code.
-
-## Requirements
-- Passing Unit Tests
-- 0, 1, or 2 player Tic-tac-toe.
-- Command Line Interface
-- Computer AI
 
 ## Project Structure
 ```
@@ -124,20 +106,3 @@ Returns a valid move for the first move but after that your program will go into
 Think about the levels of intelligence you can build into this method. Start with the simplest level of intelligence, and get more and more complicated. Each step of the way you should have a working computer player though.
 
 Remember, Tic-tac-toe when played perfectly is unwinnable. You should strive to build computer logic that when the computer plays, the game is unwinnable. You can hardcode your logic, things like "On turn 1 always try to go in the middle if you can" and if not "try to go in a corner" or any logic tree you can think of - there is an algorithm called Min/Max, but it's going to be hard to implement given our current implementation of a Game, so we recommend building something that's a more colloquial or condition-based algorithm.
-
-#### `bin/tictactoe`
-The requirements of your CLI are as follows, free for you to implement however you see fit as we provide no tests against the CLI.
-
-  * Greet the user with a message.
-  * Prompt the user for what kind of game they want to play, 0,1, or 2 player.
-  * Ask the user for who should go first and be "X".
-  * Use the input to correctly initialize a `Game` with the appropriate player types and token values.
-  * When the game is over, the CLI should prompt the user if they would like to play again and allow them to choose a new configuration for the game as described above. If the user doesn't want to play again, exit the program.
-
-You can implement this logic within the `bin/tictactoe` directly or encapsulate it within `Game` via a method like `#start` and simply evoke that method in the CLI. There is no wrong way to implement code that works.
-
-If you'd like, implement a "wargames" game type. When asked what kind of game they want to play or for the number of players, if the user types in "wargames", have the computer play itself 100 times and report how many times the game was won. This is not a requirement, it would just be fun. A perfect computer AI should never be able to win, like in the case of thermonuclear war.
-
-The rest is up to you and your team. Have fun, implement the spirit of the project, meet the requirements as you interpret them, be creative, and don't worry, there are no wrong answers with code.
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/ttt-with-ai-project'>Tic-tac-toe with AI</a> on Learn.co and start learning to code for free.</p>
